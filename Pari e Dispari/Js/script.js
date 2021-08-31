@@ -44,6 +44,7 @@ function evenOrOdd( num ) {
     }
 } 
 
+
 // 2. L'utente sceglie pari o dispari e inserisce un numero da 1 a 5
 //   a. chiedere all'utente di scegliere pari o dispari (prompt)
 var userOddEven = prompt("choose even or odd");
@@ -65,17 +66,19 @@ while ( number<1 || number>5 || isNaN(number) ) {
 }
 console.log(number);
 
+
 // 3. Richiamare le funzioni
 //  a. richiamare il numero computer generato
 var cpuNumber = RandomNumber(0, 5);
 console.log(cpuNumber);
+
 //  b. sommare il numero utente con il numero computer generato
 var sumUserCpu = sum(number, cpuNumber);
 console.log(sumUserCpu);
+
 //  c. confrontare la somma ottenuta se è pari o dispari
 var resultEvenOdd = evenOrOdd( sumUserCpu );
 console.log(resultEvenOdd);
-
 
 
 // 4. Dichiariamo chi ha vinto
