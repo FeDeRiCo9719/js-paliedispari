@@ -15,12 +15,12 @@ Dichiariamo chi ha vinto. */
     b. chiedere all'utente di inserisce un numero da 1 a 5 (prompt) */
 
 /* 3. Richiamare le funzioni
-    a. confrontare la somma ottenuta se è pari o dispari
-    b. stampare    
+    a. richiamare il numero computer generato
+    b. sommare il numero utente con il numero computer generato    
+    c. confrontare la somma ottenuta se è pari o dispari
 
 /* 4. Dichiariamo chi ha vinto
-    a. confrontare la somma ottenuta se è pari o dispari
-    b. stampare
+    a. dichiarare il vincitore
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -46,14 +46,14 @@ function evenOrOdd( num ) {
 
 // 2. L'utente sceglie pari o dispari e inserisce un numero da 1 a 5
 //   a. chiedere all'utente di scegliere pari o dispari (prompt)
-var odd_even = prompt("choose even or odd");
+var userOddEven = prompt("choose even or odd");
 
 // verifica pari o dispari
-while ( odd_even !== "even" && odd_even !== "odd" ) {
+while ( userOddEven !== "even" && userOddEven !== "odd" ) {
     alert("Error");
-    odd_even = prompt("choose even or odd");
+    userOddEven = prompt("choose even or odd");
 }
-console.log(odd_even);
+console.log(userOddEven);
 
 //   b. chiedere all'utente di inserisce un numero da 1 a 5 (prompt)
 var number = parseInt(prompt("choose a number between 1 and 5"));
@@ -69,11 +69,19 @@ console.log(number);
 //  a. richiamare il numero computer generato
 var cpuNumber = RandomNumber(0, 5);
 console.log(cpuNumber);
-//  a. sommare il numero utente con il numero computer generato
+//  b. sommare il numero utente con il numero computer generato
 var sumUserCpu = sum(number, cpuNumber);
 console.log(sumUserCpu);
+//  c. confrontare la somma ottenuta se è pari o dispari
+var resultEvenOdd = evenOrOdd( sumUserCpu );
+console.log(resultEvenOdd);
 
 
 
 // 4. Dichiariamo chi ha vinto
-//   a. confrontare la somma ottenuta se è pari o dispari
+//   a. dichiarare il vincitore
+if ( resultEvenOdd == userOddEven ) {
+    console.log("Hai vinto!!");
+} else {
+    console.log("Hai perso mi dispiace!");
+}
