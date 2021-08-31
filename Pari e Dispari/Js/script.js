@@ -47,12 +47,23 @@ function evenOrOdd( num ) {
 // 2. L'utente sceglie pari o dispari e inserisce un numero da 1 a 5
 //   a. chiedere all'utente di scegliere pari o dispari (prompt)
 var odd_even = prompt("choose even or odd");
+
+// verifica pari o dispari
+while ( odd_even !== "even" && odd_even !== "odd" ) {
+    alert("Error");
+    odd_even = prompt("choose even or odd");
+}
 console.log(odd_even);
-// verifica
+
 //   b. chiedere all'utente di inserisce un numero da 1 a 5 (prompt)
 var number = parseInt(prompt("choose a number between 1 and 5"));
+
+// verifica numero da 1 a 5
+while ( number<1 || number>5 || isNaN(number) ) {
+    alert("Error");
+    number = parseInt(prompt("choose a number between 1 and 5"));
+}
 console.log(number);
-// verifica
 
 // 3. Richiamare le funzioni
 //  a. richiamare il numero computer generato
