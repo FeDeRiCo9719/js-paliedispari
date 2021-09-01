@@ -10,11 +10,17 @@ Creare una funzione per capire se la parola inserita è palindroma */
 // 1. creare la funzione
 function reverseString(string) {
     var supporto = "";
-    for (var i = string.length - 1; i >= 0; i--) {
+    for (var i = string.length - 1; i >= 0; i--) { // var i =6-1; i
         supporto += string[i];  // "" = "" + ultima lettera di string
     }
-    return supporto;
+
+    if (string == supporto ) {
+        return true;
+    } else {
+        return false;
+    }
 }
+
 
 // 2. chiedere all’utente di inserire una parola
 var userWord = (prompt("Inserisci una parola"));
@@ -25,12 +31,12 @@ while ( !isNaN (userWord) ) {
 }
 console.log(userWord);
 
-// 3. richiamare la funzione 
+// 3. richiamare la funzione all'interno di una nuova variabile
 var reverseWord = reverseString(userWord);
 console.log(reverseWord);
 
 // 4. verificare se la parola inserita è palindroma
-if (userWord == reverseWord ) {
+if (reverseString(userWord) == true ) {
     console.log("La parola inserita è palindroma!");
 } else {
     console.log("La parola inserita non è palindroma!");
